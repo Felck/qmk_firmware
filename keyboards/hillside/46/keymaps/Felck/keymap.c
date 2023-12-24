@@ -9,6 +9,7 @@ enum layers {
     _NAV,
     _SYM,
     _ADJUST,
+    _GAME,
 };
 
 #define xxxxxxx KC_NO
@@ -16,6 +17,8 @@ enum layers {
 #define LY_NAV MO(_NAV)
 #define LY_SYM MO(_SYM)
 #define LY_ADJ MO(_ADJUST)
+#define LY_GAME DF(_GAME)
+#define RST_LY DF(_BASE)
 #define ALT_GR OSM(MOD_RALT)
 #define OSM_SFT OSM(MOD_LSFT)
 
@@ -40,10 +43,16 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                          _______, _______, _______, _______,    LY_ADJ , _______, _______, _______
     ),
     [_ADJUST] = LAYOUT(
-     EE_CLR,  xxxxxxx, xxxxxxx, xxxxxxx, xxxxxxx, xxxxxxx,                                        xxxxxxx, KC_F1,   KC_F2,   KC_F3,   KC_F4,   xxxxxxx, 
+     LY_GAME, xxxxxxx, xxxxxxx, xxxxxxx, xxxxxxx, xxxxxxx,                                        xxxxxxx, KC_F1,   KC_F2,   KC_F3,   KC_F4,   xxxxxxx, 
      xxxxxxx, KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, xxxxxxx,                                        xxxxxxx, KC_F5,   KC_F6,   KC_F7,   KC_F8,   xxxxxxx, 
-     QK_BOOT, xxxxxxx, xxxxxxx, xxxxxxx, xxxxxxx, xxxxxxx, xxxxxxx,                      xxxxxxx, xxxxxxx, KC_F9,   KC_F10,  KC_F11,  KC_F12,  xxxxxxx,
+     QK_BOOT, EE_CLR,  xxxxxxx, xxxxxxx, xxxxxxx, xxxxxxx, xxxxxxx,                      xxxxxxx, xxxxxxx, KC_F9,   KC_F10,  KC_F11,  KC_F12,  xxxxxxx,
                                          xxxxxxx, xxxxxxx, xxxxxxx, _______,    _______, xxxxxxx, xxxxxxx, xxxxxxx
+    ),
+    [_GAME] = LAYOUT(
+     KC_ESC,  KC_ENT,  DE_Q,    DE_W,    DE_E,    DE_R,                                           xxxxxxx, xxxxxxx, xxxxxxx, xxxxxxx, xxxxxxx, RST_LY, 
+     KC_LSFT, DE_G,    DE_S,    DE_A,    DE_D,    DE_F,                                           xxxxxxx, xxxxxxx, xxxxxxx, xxxxxxx, xxxxxxx, xxxxxxx, 
+     KC_LCTL, DE_6,    DE_1,    DE_2,    DE_3,    DE_4,    xxxxxxx,                      xxxxxxx, xxxxxxx, xxxxxxx, xxxxxxx, xxxxxxx, xxxxxxx, xxxxxxx,
+                                         xxxxxxx, DE_5,    KC_SPC,  DE_X,       xxxxxxx, xxxxxxx, xxxxxxx, xxxxxxx
     ),
 };
 
