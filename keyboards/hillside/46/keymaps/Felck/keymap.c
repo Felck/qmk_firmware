@@ -50,7 +50,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
     [_GAME] = LAYOUT(
      KC_ESC,  KC_ENT,  DE_Q,    DE_W,    DE_E,    DE_R,                                           xxxxxxx, xxxxxxx, xxxxxxx, xxxxxxx, xxxxxxx, RST_LY, 
-     KC_LSFT, DE_G,    DE_S,    DE_A,    DE_D,    DE_F,                                           xxxxxxx, xxxxxxx, xxxxxxx, xxxxxxx, xxxxxxx, xxxxxxx, 
+     KC_LSFT, DE_G,    DE_A,    DE_S,    DE_D,    DE_F,                                           xxxxxxx, xxxxxxx, xxxxxxx, xxxxxxx, xxxxxxx, xxxxxxx, 
      KC_LCTL, DE_6,    DE_1,    DE_2,    DE_3,    DE_4,    xxxxxxx,                      xxxxxxx, xxxxxxx, xxxxxxx, xxxxxxx, xxxxxxx, xxxxxxx, xxxxxxx,
                                          xxxxxxx, DE_5,    KC_SPC,  DE_X,       xxxxxxx, xxxxxxx, xxxxxxx, xxxxxxx
     ),
